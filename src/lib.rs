@@ -42,6 +42,14 @@ macro_rules! size_of {
     }
 }
 
+/// # Examples
+///
+/// ```rust
+/// # #[macro_use] extern crate bytes_of;
+/// # fn main() {
+/// assert_eq!(align_of!(i32), 4);
+/// # }
+/// ```
 #[macro_export]
 macro_rules! align_of {
     ($T:ty) => {
