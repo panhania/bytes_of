@@ -26,6 +26,16 @@ macro_rules! offset_of {
     }
 }
 
+/// # Examples
+///
+/// ```rust
+/// # #[macro_use] extern crate bytes_of;
+/// # fn main() {
+/// assert_eq!(size_of!(i32), 4);
+/// assert_eq!(size_of!(i64), 8);
+/// # }
+/// ```
+#[macro_export]
 macro_rules! size_of {
     ($T:ty) => {
         ::std::mem::size_of::<$T>()
