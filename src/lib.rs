@@ -41,3 +41,10 @@ macro_rules! size_of {
         ::std::mem::size_of::<$T>()
     }
 }
+
+#[macro_export]
+macro_rules! align_of {
+    ($T:ty) => {
+        ::std::mem::align_of::<$T>()
+    }
+}
