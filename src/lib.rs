@@ -1,3 +1,6 @@
+/// Returns the offset, in bytes, from the beginning of an object of a given
+/// type to a specific field.
+///
 /// # Examples
 ///
 /// ```rust
@@ -26,6 +29,10 @@ macro_rules! offset_of {
     }
 }
 
+/// Returns the size, in bytes, of a given type.
+///
+/// It is equivalent to `std::mem::size_of<T>::()`.
+///
 /// # Examples
 ///
 /// ```rust
@@ -42,6 +49,12 @@ macro_rules! size_of {
     }
 }
 
+/// Returns the [alignment], in bytes, of a given type.
+///
+/// It is equivalent to `std::mem::align_of<T>::()`.
+///
+/// [alignment]: https://en.wikipedia.org/wiki/Data_structure_alignment
+///
 /// # Examples
 ///
 /// ```rust
