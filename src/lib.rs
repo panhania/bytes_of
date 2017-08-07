@@ -25,3 +25,9 @@ macro_rules! offset_of {
         unsafe { &((*(0 as *const $T)).$($field).+) as *const _ as usize }
     }
 }
+
+macro_rules! size_of {
+    ($T:ty) => {
+        ::std::mem::size_of::<$T>()
+    }
+}
