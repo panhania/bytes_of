@@ -14,7 +14,7 @@
 ///
 /// # fn main() {
 /// assert_eq!(offset_of!(Foo, bar), 0);
-/// assert_eq!(offset_of!(Foo, baz), std::mem::size_of::<Bar>());
+/// assert_eq!(offset_of!(Foo, baz), size_of!(Bar));
 /// assert_eq!(offset_of!(Foo, bar.quux), 0);
 /// assert_eq!(offset_of!(Foo, bar.norf), 8);
 /// # }
