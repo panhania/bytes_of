@@ -46,3 +46,13 @@ better fit for your needs. I, however, wanted something simpler and with
 interface identical to the one found in other languages.
 
 [`field-offset`]: https://crates.io/crates/field-offset
+
+Acknowledgements
+----------------
+
+See issue [#1144][gh-issue] for discussion about `sizeof`, `alignof` and
+`offsetof`. The `offset_of!` macro implementation is based on [this][so-thread]
+thread.
+
+[gh-issue]: https://github.com/rust-lang/rfcs/issues/1144
+[so-thread]: https://stackoverflow.com/questions/40310483/how-to-get-pointer-offset-in-bytes/40310851#40310851
