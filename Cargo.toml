@@ -1,0 +1,6 @@
+[package]
+name = "bytes_of"
+version = "0.0.1"
+authors = ["Łukasz Hanuszczak <lukasz.hanuszczak@gmail.com>"]
+
+[dependencies]
