@@ -24,9 +24,19 @@
 /// ```
 #[macro_export]
 macro_rules! offset_of {
-    ($T:ty, $($field:ident).+) => {
-        unsafe { &((*(0 as *const $T)).$($field).+) as *const _ as usize }
-    }
+    ($T:ty, $($field:ident).+) => {{
+        // We wrap offset calculation in a function to avoid warning about an
+        // unused `unsafe` block if the macro is invoked inside other `unsafe`
+        // block.
+        //
+        // Note that using the `#[unused_unsafe]` attribute is not very
+        // viable solution as it requires `#![feature(stmt_expr_attributes)]`
+        // to be enabled.
+        fn offset() -> usize {
+            unsafe { &((*(0 as *const $T)).$($field).+) as *const _ as usize }
+        }
+        offset()
+    }}
 }
 
 /// Returns the size, in bytes, of a given type.
