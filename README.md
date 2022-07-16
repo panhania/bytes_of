@@ -41,8 +41,8 @@ both of them being used as macros next to each other just feels nicer.
 Alternatives
 ------------
 
-There also exists a [`field-offset`] crate that has a bit richer API and might a
-better fit for your needs. I, however, wanted something simpler and with
+There also exists a [`field-offset`] crate that has a bit richer API and might
+be a better fit for your needs. I, however, wanted something simpler and with
 interface identical to the one found in other languages.
 
 [`field-offset`]: https://crates.io/crates/field-offset
